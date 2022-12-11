@@ -35,10 +35,12 @@ function App() {
       ]
     }
   ])
+
   const valueSend = [
     value,
     setValue
   ]
+
   return (
     <div>
       <UserContext.Provider value={valueSend}>

@@ -26,13 +26,14 @@ const Header = () => {
 
 
     <Navbar collapseOnSelect expand="lg" >
-      <Container className='py-2'>
+      <Container className='py-2 '>
         <Navbar.Brand><Link to='/' style={{ color: '#9B1FE9', textDecoration: 'none' }} className='fw-bold'>Faucets</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+
+        <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto">
           </Nav>
-          <Nav>
+          <Nav >
             <NavDropdown title={value ? value : "Select Name"} style={{ border: '1px solid gray', padding: '0px 20px' }} id="collasible-nav-dropdown" onSelect={handleSelect}>
               <NavDropdown.Item eventKey="Arbitrum Rinkeby"> <img src={require("../image/1.png")} style={{ height: '15px', width: '15px' }} alt=" " />  Arbitrum Rinkeby</NavDropdown.Item>
               <NavDropdown.Item eventKey="Avalanche Fuji">  <img src={require("../image/2.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Avalanche Fuji</NavDropdown.Item>
@@ -44,7 +45,7 @@ const Header = () => {
               <NavDropdown.Item eventKey="Polygon Mumbai">  <img src={require("../image/8.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Polygon Mumbai</NavDropdown.Item>
 
             </NavDropdown>
-            <Button className='border border-danger  mx-3 px-4 fw-bold' variant="outline" onClick={() => setModalShow(true)} style={{ color: '#9B1FE9' }}> <FaWallet /> Collect Wallet</Button>{' '}
+            <Button className='border border-danger  mx-3  px-4 fw-bold' variant="outline" onClick={() => setModalShow(true)} style={{ color: '#9B1FE9' }}> <FaWallet /> Collect Wallet</Button>{' '}
             <ModalBody show={modalShow} onHide={() => setModalShow(false)}></ModalBody>
 
             <DropdownButton title={<CgProfile style={{ height: '25px', width: '25px' }} />} >
@@ -57,6 +58,7 @@ const Header = () => {
 
           </Nav>
         </Navbar.Collapse>
+
 
       </Container>
     </Navbar>

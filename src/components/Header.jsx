@@ -16,20 +16,16 @@ const Header = () => {
   const [value, setValue] = useContext(UserContext);
   const [modalShow, setModalShow] = React.useState(false);
 
-
   const handleSelect = (e) => {
     setValue(e)
     // console.log(e)
   }
 
   return (
-
-
     <Navbar collapseOnSelect expand="lg" >
       <Container className='py-2 '>
         <Navbar.Brand><Link to='/' style={{ color: '#9B1FE9', textDecoration: 'none' }} className='fw-bold'>Faucets</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto">
           </Nav>
@@ -43,26 +39,18 @@ const Header = () => {
               <NavDropdown.Item eventKey="Harmony Testnet">  <img src={require("../image/6.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Harmony Testnet</NavDropdown.Item>
               <NavDropdown.Item eventKey="PQA Network Sokol">  <img src={require("../image/7.png")} style={{ height: '15px', width: '15px' }} alt=" " /> POA Network Sokol</NavDropdown.Item>
               <NavDropdown.Item eventKey="Polygon Mumbai">  <img src={require("../image/8.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Polygon Mumbai</NavDropdown.Item>
-
             </NavDropdown>
             <Button className='border border-danger mx-1  mx-md-3  px-4 fw-bold my-3 my-md-3 my-lg-0' variant="outline" onClick={() => setModalShow(true)} style={{ color: '#9B1FE9' }}> <FaWallet /> Collect Wallet</Button>{' '}
             <ModalBody show={modalShow} onHide={() => setModalShow(false)}></ModalBody>
-
             <DropdownButton className='text-center' title={<CgProfile style={{ height: '25px', width: '25px' }} />} >
               <Dropdown.Item ><Link to='/login' style={{ textDecoration: 'none', color: 'black' }}>Log in</Link></Dropdown.Item>
               <Dropdown.Item ><Link to='/signup' style={{ textDecoration: 'none', color: 'black' }}>Sign Up</Link></Dropdown.Item>
               <Dropdown.Item ><Link to='/faq' style={{ textDecoration: 'none', color: 'black' }}>FAQ</Link></Dropdown.Item>
-
             </DropdownButton>
-
-
           </Nav>
         </Navbar.Collapse>
-
-
       </Container>
     </Navbar>
-
   );
 };
 

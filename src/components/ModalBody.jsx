@@ -3,12 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 
 const ModalBody = (props) => {
   return (
-    <Modal
-      {...props}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal {...props} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           <h2 className='fw-bold'>Connect your wallet</h2>
@@ -26,7 +21,6 @@ const ModalBody = (props) => {
           </div>
         </div>
       </Modal.Body>
-
     </Modal>
   );
 };

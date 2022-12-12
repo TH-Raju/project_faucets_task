@@ -34,7 +34,7 @@ const Header = () => {
           <Nav className="me-auto">
           </Nav>
           <Nav >
-            <NavDropdown title={value ? value : "Select Name"} style={{ border: '1px solid gray', padding: '0px 20px' }} id="collasible-nav-dropdown" onSelect={handleSelect}>
+            <NavDropdown title={value ? value : "Select Name"} style={{ border: '1px solid gray', padding: '0px 5px 0px 20px' }} id="collasible-nav-dropdown" onSelect={handleSelect}>
               <NavDropdown.Item eventKey="Arbitrum Rinkeby"> <img src={require("../image/1.png")} style={{ height: '15px', width: '15px' }} alt=" " />  Arbitrum Rinkeby</NavDropdown.Item>
               <NavDropdown.Item eventKey="Avalanche Fuji">  <img src={require("../image/2.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Avalanche Fuji</NavDropdown.Item>
               <NavDropdown.Item eventKey="BNB Chain Testnet "><img src={require("../image/3.png")} style={{ height: '15px', width: '15px' }} alt=" " /> BNB Chain Testnet</NavDropdown.Item>
@@ -45,10 +45,10 @@ const Header = () => {
               <NavDropdown.Item eventKey="Polygon Mumbai">  <img src={require("../image/8.png")} style={{ height: '15px', width: '15px' }} alt=" " /> Polygon Mumbai</NavDropdown.Item>
 
             </NavDropdown>
-            <Button className='border border-danger  mx-3  px-4 fw-bold' variant="outline" onClick={() => setModalShow(true)} style={{ color: '#9B1FE9' }}> <FaWallet /> Collect Wallet</Button>{' '}
+            <Button className='border border-danger mx-1  mx-md-3  px-4 fw-bold my-3 my-md-3 my-lg-0' variant="outline" onClick={() => setModalShow(true)} style={{ color: '#9B1FE9' }}> <FaWallet /> Collect Wallet</Button>{' '}
             <ModalBody show={modalShow} onHide={() => setModalShow(false)}></ModalBody>
 
-            <DropdownButton title={<CgProfile style={{ height: '25px', width: '25px' }} />} >
+            <DropdownButton className='text-center' title={<CgProfile style={{ height: '25px', width: '25px' }} />} >
               <Dropdown.Item ><Link to='/login' style={{ textDecoration: 'none', color: 'black' }}>Log in</Link></Dropdown.Item>
               <Dropdown.Item ><Link to='/signup' style={{ textDecoration: 'none', color: 'black' }}>Sign Up</Link></Dropdown.Item>
               <Dropdown.Item ><Link to='/faq' style={{ textDecoration: 'none', color: 'black' }}>FAQ</Link></Dropdown.Item>

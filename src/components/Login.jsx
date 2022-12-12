@@ -68,7 +68,7 @@ const Login = () => {
                 <AiFillInstagram style={{ height: '25px', width: '25px' }} />
 
             </div>
-            <div className='mb-5 items-center' id='signInDiv'></div>
+            <div className='mb-5 my-2 w-75 w-md-50 w-lg-25 mx-auto' id='signInDiv'></div>
             {
                 Object.keys(user).length !== 0 &&
                 <Button onClick={(e) => handleSignOut(e)}>Sign Out</Button>

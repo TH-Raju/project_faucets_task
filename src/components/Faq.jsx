@@ -4,8 +4,8 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const Faq = () => {
     return (
-        <div className='row'>
-            <div className='col-lg-4 col-md-6 col-sm-8 mx-auto my-5'>
+        <div className='row container'>
+            <div className='col-12 col-md-10 col-lg-8   mx-auto my-5'>
                 <h2 className='fs-1 my-5' style={{ color: '#9B1FE9', fontWeight: 'bold' }}>Frequently Asked Questions</h2>
                 <Accordion>
                     <Accordion.Item eventKey="0">
